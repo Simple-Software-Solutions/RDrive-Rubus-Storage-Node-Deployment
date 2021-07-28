@@ -10,3 +10,6 @@ Pre-Req
 2. 50 GB Space
 3. 100Mbit Link Speed
 4. A Active Validator (Masternode) Operator (MN Pubkey)
+
+Docs
+
