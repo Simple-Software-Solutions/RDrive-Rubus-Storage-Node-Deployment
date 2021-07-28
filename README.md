@@ -9,4 +9,4 @@ Pre-Req
 1. Ubuntu 18.4
 2. 50 GB Space
 3. 100Mbit Link Speed
-4. A active Validator (Masternode) Operator (MN Pubkey)
+4. A Active Validator (Masternode) Operator (MN Pubkey)
