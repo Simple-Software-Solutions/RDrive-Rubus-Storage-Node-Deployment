@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animation.css">
+  <title>SDrive</title>
+  <script>
+
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+    </script>
+  <style>
+      a:hover{
+          text-decoration: none;
+        
+      }
+      .container-audio {
+    width: 66%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #444;
+    margin: 20px auto;
+    overflow: hidden;
+}
+audio {
+  width:100%;
+}
+audio:nth-child(2), audio:nth-child(4), audio:nth-child(6) {
+    margin: 0;
+}
+.container-audio .colum1 {
+    width: 23px;
+    height: 5em;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    display: inline-block;
+    position: relative;
+}
+.container-audio .colum1:last-child {
+    margin: 0;
+}
+.container-audio .colum1 .row {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(to up, #7700aa, #8800ff);
+    position: absolute;
+    -webkit-animation: Rofa 10s infinite ease-in-out;
+    animation: Rofa 10s infinite ease-in-out;
+    bottom: 0;
+}
+.container-audio .colum1:nth-of-type(1) .row {
+    -webkit-animation-delay: 3.99s;
+    animation-delay: 3.99s;
+}
+.container-audio .colum1:nth-of-type(2) .row {
+    -webkit-animation-delay: 3.80s;
+    animation-delay: 3.80s;
+}
+.container-audio .colum1:nth-of-type(3) .row {
+    -webkit-animation-delay: 3.70s;
+    animation-delay: 3.70s;
+}
+.container-audio .colum1:nth-of-type(4) .row {
+    -webkit-animation-delay: 3.60s;
+    animation-delay: 3.60s;
+}
+.container-audio .colum1:nth-of-type(5) .row {
+    -webkit-animation-delay: 3.50s;
+    animation-delay: 3.50s;
+}
+.container-audio .colum1:nth-of-type(6) .row {
+    -webkit-animation-delay: 3.40s;
+    animation-delay: 3.40s;
+}
+.container-audio .colum1:nth-of-type(7) .row {
+    -webkit-animation-delay: 3.30s;
+    animation-delay: 3.30s;
+}
+.container-audio .colum1:nth-of-type(8) .row {
+    -webkit-animation-delay: 3.20s;
+    animation-delay: 3.20s;
+}
+.container-audio .colum1:nth-of-type(9) .row {
+    -webkit-animation-delay: 3.10s;
+    animation-delay: 3.10s;
+}
+.container-audio .colum1:nth-of-type(10) .row {
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+}
+.container-audio .colum1:nth-of-type(11) .row {
+    -webkit-animation-delay: 2.1s;
+    animation-delay: 2.1s;
+}
+.container-audio .colum1:nth-of-type(12) .row {
+    -webkit-animation-delay: 2.10s;
+    animation-delay: 2.10s;
+}
+.container-audio .colum1:nth-of-type(13) .row {
+    -webkit-animation-delay: 2.20s;
+    animation-delay: 2.20s;
+}
+.container-audio .colum1:nth-of-type(14) .row {
+    -webkit-animation-delay: 1.30s;
+    animation-delay: 1.30s;
+}
+.container-audio .colum1:nth-of-type(15) .row {
+    -webkit-animation-delay: 1.40s;
+    animation-delay: 1.40s;
+}
+.container-audio .colum1:nth-of-type(16) .row {
+    -webkit-animation-delay: 1.50s;
+    animation-delay: 1.50s;
+}
+.container-audio .colum1:nth-of-type(17) .row {
+    -webkit-animation-delay: 1.60s;
+    animation-delay: 1.60s;
+}
+.container-audio .colum1:nth-of-type(18) .row {
+    -webkit-animation-delay: 1.70s;
+    animation-delay: 1.70s;
+}
+.container-audio .colum1:nth-of-type(19) .row {
+    -webkit-animation-delay: 1.80s;
+    animation-delay: 1.80s;
+}
+.container-audio .colum1:nth-of-type(20) .row {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes Rofa {
+    0% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+        background-color: yellow;
+    }
+
+    5% {
+        height: 100%;
+        -webkit-transform: translatey(15px);
+        transform: translatey(15px);
+        background-color: fuchsia;
+    }
+    10% {
+        height: 90%;
+        transform: translatey(0);
+        -webkit-transform: translatey(0);
+        background-color: bisque;
+    }
+
+    15% {
+        height: 80%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    20% {
+        height: 70%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+        background-color: cornflowerblue;
+    }
+    25% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+        background-color: cornflowerblue;
+    }
+    30% {
+        height: 70%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+        background-color: cornflowerblue;
+    }
+    35% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    40% {
+        height: 60%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    45% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    50% {
+        height: 50%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    55% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    60% {
+        height: 40%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    65% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    70% {
+        height: 30%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    75% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    80% {
+        height: 20%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    85% {
+        height: 0%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    90% {
+        height: 10%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    95% {
+        height: 5%;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+    100% {
+        height: 0;
+        -webkit-transform: translatey(0);
+        transform: translatey(0);
+
+        background-color: cornflowerblue;
+    }
+}
+ 
+    .top-up
+{
+    
+  
+  color:#fff;
+  font-size: 15px;
+  padding: 10px;
+  margin: 0px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+
+  background-color:#3a3f48;
+}
+.top-up:hover
+{
+  
+  color:#9a3fda;
+  
+  padding: 10px;
+  margin: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #9a3fda;
+  text-decoration: none;
+}
+
+.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+.file-upload{
+    background-color: #9a3fda;
+
+}
+.fileinput-remove,
+.fileinput-upload{
+	display: none;
+}
+.dropdown-menu a
+{
+  color: #fff;
+}
+  </style> 
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+
+  <nav style="padding-bottom:3px;" class=" navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#1f1029" id="main-nav">
+    <div class="container">
+      <a href="index.html" class="navbar-brand"><img src="../img/logof.png"><span style="margin-left:20px;font-size:20px; font-family:Arial, Helvetica, sans-serif" class="fas">SDrive</span></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+       
+        
+      </div>
+    </div>
+    
+  </nav>
+ 
+  <!-- HOME SECTION -->
+  <header id="home-section">
+    <div class="dark-overlay col-12">
+      <div class="home-inner container col-12">
+        <div class="row col-8 bg-white p-4 col-6 m-auto" style="opacity: 0.8; border-radius: 20px;">
+          <div class="card text-center col-12 card-form" style="background:#fff;color:#9a3fda;border: solid 3px #9a3fda ;box-shadow: 0 0 5px #9a3fda;">
+            <div class="modal-content">
+                
+                <div class="modal-body" style="border: solid 5px #9a3fda ; background-color: #231230">
+                    <div class="mt-2 col-lg-12 col-sm-12 col-12 main-section m-auto" >
+                       
+                        <h3 class="text-center" style="color: #9a3fda;">Music Player panel</h3><br>
+                      <h4 class="text-center" style="color: #9a3fda;">
+                        <span style="color: #3a3f48;margin-right: 20px;"> File Name:</span>
+                       <%=Music.File_Name%></h4>
+                       
+                       
+                       <div class="container-audio">
+                        <audio controls  loop autoplay style="background-color: #9a3fda;">
+                            
+                                   <source src="/<%=Music.Path%>" style="background-color: #9a3fda;">
+                                   Your browser dose not Support the audio Tag
+                               </audio>
+                    </div>
+                    
+    
+    
+    
+    
+                       
+    
+    
+    
+                    </div>
+
+
+
+          </div>
+       </div>   
+      </div>
+    </div>
+</header>
+  
+
+  <!-- EXPLORE SECTION -->
+ 
+ 
+
+  <!-- FOOTER -->
+  <footer id="main-footer" style="background-color:#1f1029">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-4">
+          <h3>SDrive</h3>
+          <p>Copyright &copy;
+            <span id="year"></span>
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade text-dark"  id="contactModal">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="background-color:#9a3fda;color:#fff">
+        <div class="modal-header">
+          <h5 class="modal-title">Login Details</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+       
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+<script>
+  // Trigger CSS animations on scroll.
+// Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+
+// Looking for a version that also reverses the animation when
+// elements scroll below the fold again?
+// --> Check https://codepen.io/bramus/pen/vKpjNP
+
+jQuery(function($) {
+  
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+  
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+  </script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+  <script>
+   $(document).ready (function(){
+    $(".alert-dismissible").fadeTo(2000, 300).slideUp(300, function(){
+    $(".alert-dismissible").alert('close');
+});
+         
+});
+  </script>
+  <script>
+    $(document).ready(function(){
+    // Check if passwords match
+   
+    let currForm1 = document.getElementById('myForm1');
+      // Validate on submit:
+      currForm1.addEventListener('submit', function(event) {
+        if (currForm1.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        currForm1.classList.add('was-validated');
+      }, false);
+      // Validate on input:
+      currForm1.querySelectorAll('.form-control').forEach(input => {
+        input.addEventListener(('input'), () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid')
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid')
+            input.classList.add('is-invalid');
+          }
+          var is_valid = $('.form-control').length === $('.form-control.is-valid').length;
+          $("#submitBtn").attr("disabled", !is_valid);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

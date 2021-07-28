@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animation.css">
+  <title>SDrive</title>
+  <script>
+
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+    </script>
+  <style>
+      a:hover{
+          text-decoration: none;
+        
+      }
+  </style> 
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" id="home">
+
+  <nav style="padding-bottom:3px;" class=" navbar navbar-expand-sm navbar-dark fixed-top" style="background-color:#1f1029" id="main-nav">
+    <div class="container">
+      <a href="index.html" class="navbar-brand"><img src="../img/logof.png"><span style="margin-left:20px;font-size:20px; font-family:Arial, Helvetica, sans-serif" class="fas">SDrive</span></a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+       
+        
+      </div>
+    </div>
+    
+  </nav>
+ 
+  <!-- HOME SECTION -->
+  <header id="home-section">
+    <div class="dark-overlay">
+      <div class="home-inner container">
+        <div class="row bg-white p-4 col-6 m-auto" style="opacity: 0.8; border-radius: 20px;">
+          <div class="card text-center col-12 card-form" style="background:#fff;color:#9a3fda;border: solid 3px #9a3fda ;box-shadow: 0 0 5px #9a3fda;">
+            <div class="card-body">
+              <h3>2 Way Varification Process</h3>
+              <%if(errors!=""){%>
+                <%for(var i=0; i< errors.length;i++){%>
+               <div class="alert alert-danger"><%=errors[i]%></div> 
+               <%}%>
+             <%}%>
+             <%if(success!=""){%>
+              <%for(var i=0; i< success.length;i++){%>
+              <div class="alert-dismissible alert alert-success"><%=success[i]%></div> 
+
+             <%}%>
+           <%}%>
+           <%if(OTV=="false"){%> 
+              <p>Please download and install Google Authenticator and scane the QRcode</p>
+              <%} else {%>
+                <p>Open Google Authenticator app and Enter the SDrive Token</p>
+                <p>
+                  If you have some trouble to enter 6 digit token then <a href="/email_varification">click to varify email address </a> and get qrcode
+                </p>
+                <%}%>  
+              <form action="/user_two_way_varification_c" method="POST" id="myForm1" class="needs-validation" novalidate>
+                
+                <div class="col-12 mb-3">
+                  <%if(OTV=="false"){%> 
+                  <img class="mx-auto d-block img-fluid"  src="<%=qrcode%>">
+                  <%}%>
+                </div> 
+                <div class="form-group">
+                  <input id="pwdId" type="text" pattern="^[0-9]{6}$"  name="token" required class="form-control form-control-lg" placeholder="Enter 6 Digit Token">
+                  <div class="valid-feedback">Valid</div>
+                  <div class="invalid-feedback">
+   Length Must be 6 Digits
+</div>
+                </div>
+                <div class="form-group">
+                  <input  id="submitBtn" type="submit" value="Click to Varify" class="btn btn-block" disabled>
+                </div>
+                
+              </form>
+             
+               
+              
+            </div>
+          </div>
+
+
+
+
+       </div>   
+      </div>
+    </div>
+</header>
+  
+
+  <!-- EXPLORE SECTION -->
+ 
+ 
+
+  <!-- FOOTER -->
+  <footer id="main-footer" style="background-color:#1f1029">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-4">
+          <h3>SDrive</h3>
+          <p>Copyright &copy;
+            <span id="year"></span>
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal fade text-dark"  id="contactModal">
+    <div class="modal-dialog" >
+      <div class="modal-content" style="background-color:#9a3fda;color:#fff">
+        <div class="modal-header">
+          <h5 class="modal-title">Login Details</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+       
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+<script>
+  // Trigger CSS animations on scroll.
+// Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+
+// Looking for a version that also reverses the animation when
+// elements scroll below the fold again?
+// --> Check https://codepen.io/bramus/pen/vKpjNP
+
+jQuery(function($) {
+  
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+  
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+  </script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+  <script>
+   $(document).ready (function(){
+    $(".alert-dismissible").fadeTo(2000, 300).slideUp(300, function(){
+    $(".alert-dismissible").alert('close');
+});
+         
+});
+  </script>
+  <script>
+    $(document).ready(function(){
+    // Check if passwords match
+   
+    let currForm1 = document.getElementById('myForm1');
+      // Validate on submit:
+      currForm1.addEventListener('submit', function(event) {
+        if (currForm1.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        currForm1.classList.add('was-validated');
+      }, false);
+      // Validate on input:
+      currForm1.querySelectorAll('.form-control').forEach(input => {
+        input.addEventListener(('input'), () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid')
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid')
+            input.classList.add('is-invalid');
+          }
+          var is_valid = $('.form-control').length === $('.form-control.is-valid').length;
+          $("#submitBtn").attr("disabled", !is_valid);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

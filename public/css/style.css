@@ -1,0 +1,162 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #9a3fda 3px solid;
+  background-color:#000;
+  box-shadow: 0 0 20px #9a3fda;
+  
+  opacity: 0.8;
+ 
+}
+
+#registerBtn
+{
+  background-color: blueviolet;
+   color: cornsilk;
+   cursor: pointer;
+}
+#registerBtn:hover
+{
+  box-shadow: 0 0 20px #9a3fda;
+}
+#submitBtn
+{
+  background-color: blueviolet;
+   color: cornsilk;
+   cursor: pointer;
+}
+#submitBtn:hover
+{
+  box-shadow: 0 0 20px #9a3fda;
+}
+
+#login:hover
+{
+	box-shadow: 0 0 30px #9a3fda ;
+}
+
+#download{
+	background-color:#9a3fda;
+	border:solid #9a3fda;
+}
+#download:hover
+{
+	box-shadow: 0 0 30px #9a3fda;
+}
+.form-control:focus
+{
+box-shadow: 0 0 20px #9a3fda;
+border: 1px solid #9a3fda;
+
+}
+.form-control:hover
+{
+box-shadow: 0 0 20px #9a3fda;
+
+
+}
+
+.nav-item a:hover
+{
+	color:#9a3fda;
+}
+.invalid-feedback{
+	color:red;
+}
+.form-control input[type=submit]:hover
+{
+box-shadow: 0 0 20px #9a3fda;
+
+}
+
+#home-section {
+  background: url(../img/final.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#home-section .home-inner {
+  padding-top: 110px;
+}
+
+#home-section .card-form {
+  opacity: 0.9;
+}
+
+#home-section .fas,
+#create-section .fas {
+  color: #008ed6;
+  background: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+#download-section .fas,
+#explore-section .fas,
+#share-section2 .fas,
+#share-section .fas {
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+.basic
+{
+	border: solid thin #D8B6F1;border-radius:7px ;color:#000; text-align:center; font-family:Arial, Helvetica, sans-serif;box-shadow: 0 0 15px #9b9bff;
+}
+.basic:hover
+{
+	box-shadow: 0 0 20px #EFEFEF;
+	border:solid thin #EFEFEF;
+	cursor:pointer;
+}
+.gold
+{
+	border: solid thin #D8B6F1;border-radius:7px;color:#000; text-align:center; font-family:Arial, Helvetica, sans-serif;box-shadow: 0 0 15px #9b9bff;
+}
+.gold:hover
+{
+	box-shadow: 0 0 20px #EFEFEF;
+	border:solid thin #EFEFEF;
+	cursor:pointer;
+}
+.feature
+{
+	border: solid thin #D8B6F1;border-radius:7px;box-shadow: 0 0 15px #9B9BFF ;color:#999; text-align:center; font-family:Arial, Helvetica, sans-serif; margin-bottom:20px;
+}
+.feature:hover
+{
+	box-shadow: 0 0 20px #9B9BFF;
+	border:solid thin #9B9BFF;
+	cursor:pointer;
+}
+
+.down
+{
+	border: solid thin #D8B6F1;border-radius:7px;box-shadow: 0 0 15px #9b9bff;
+}
+.down:hover
+{
+	box-shadow: 0 0 20px #EFEFEF;
+	border:solid thin #EFEFEF;
+}
+
+
+.icon
+{
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
